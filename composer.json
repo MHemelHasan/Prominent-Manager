@@ -1,0 +1,20 @@
+{
+  "name": "mhemelhasan/wedevs-academy",
+  "description": "Xyz Booking services for test project",
+  "type": "wordpress-plugin",
+  "license": "GPLv2",
+  "authors": [
+    {
+      "name": "M Hemel Hasan",
+      "email": "hemelsrgmts@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "WPD\\Downloads\\": "includes/"
+    },
+    "files": []
+  }
+}
