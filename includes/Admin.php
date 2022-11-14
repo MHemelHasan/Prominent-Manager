@@ -11,6 +11,7 @@ class Admin {
      * Initialize the class
      */
     function __construct() {
-        new Admin\wptpDownload();
+        // new Admin\WPMenu();
+        new Admin\WPPLdownload();
     }
 }

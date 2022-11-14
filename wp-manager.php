@@ -5,10 +5,11 @@
  * Plugin URI: https://mhemelhasan.com/WpD
  * Author: M Hemel Hasan
  * Author URI: https://mhemelhasan.com
- * Version: 1.0.1
+ * Version: 1.1.1
  * Text Domain: wp-manager
- * License: GPL2 or later
- * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * License: GPL3 
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
+ *              
  */
 
 /** 
