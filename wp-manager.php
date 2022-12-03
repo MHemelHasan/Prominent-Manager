@@ -35,7 +35,7 @@ final class wp_manager {
      *
      * @var string
      */
-    const version = '1.0.1';
+    const version = '1.1.1';
 
     /**
      * Class construcotr
