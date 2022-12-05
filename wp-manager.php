@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: WP Manager
- * Description: WP
+ * Plugin Name: WP Plugin Manager
+ * Description: You can easily download any plugin on your website with the help of this plugin. After Wp plugin manager activation you will see download button under each plugin on your plugin page. Clicking the download button will download the plugin in zip format.
  * Plugin URI: https://mhemelhasan.com/WpD
  * Author: M Hemel Hasan
  * Author URI: https://mhemelhasan.com
@@ -9,6 +9,9 @@
  * Text Domain: wp-manager
  * License: GPL3 
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
+ * Tags: Plugin download, wp plugin download, Plugin downloader, wp plugin downloader, wp plugin manager
+ * Tested up to: 6.1.1
+ * Requires PHP: 7.2
  *              
  */
 
