@@ -1,6 +1,6 @@
 <?php
 
-namespace WPD\Downloads;
+namespace PM\ProminentManager;
 
 /**
  * Assets handlers class
@@ -23,8 +23,8 @@ class Assets {
     public function get_scripts() {
         return [
             'wp-manager-script' => [
-                'src'     => WP_MANAGER_ASSETS . '/js/frontend.js',
-                'version' => filemtime( WP_MANAGER_PATH . '/assets/js/frontend.js' ),
+                'src'     => PM_PROMINENT_ASSETS . '/js/frontend.js',
+                'version' => filemtime( PM_PROMINENT_PATH . '/assets/js/frontend.js' ),
                 'deps'    => [ 'jquery' ]
             ]
         ];
@@ -38,8 +38,8 @@ class Assets {
     public function get_styles() {
         return [
             'wp-manager-style' => [
-                'src'     => WP_MANAGER_ASSETS . '/css/frontend.css',
-                'version' => filemtime( WP_MANAGER_PATH . '/assets/css/frontend.css' )
+                'src'     => PM_PROMINENT_ASSETS . '/css/frontend.css',
+                'version' => filemtime( PM_PROMINENT_PATH . '/assets/css/frontend.css' )
             ]
             
         ];

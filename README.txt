@@ -1,4 +1,4 @@
-=== WP Plugin Manager ===
+=== Prominent ===
 Contributors: hemelhasan
 Tags: Plugin download, wp plugin download, Plugin downloader, wp plugin downloader, wp plugin manager
 Requires at least: 4.0
@@ -8,15 +8,15 @@ Requires PHP: 7.2
 License: GPL3 
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-This plugin will work as a plugin manager for WordPress. You can download any plugin with this plugin.
+This plugin will work as a Prominent Manager for WordPress. For now, You can download any plugin with this plugin.
 
 === Description ===
 
 = Download the plugin from your WordPress site
 
-WP Plugin Manager will add a new download button below each plugin on the plugin page of your website. With the help of this download button you can download that plugin. We have different needs for plugins. The WP Plugin Manager will give us this facility. We can download and backup any plugin used by the any WordPress website.
+Prominent Manager will add a new download button below each plugin on the plugin page of your website. With the help of this download button you can download that plugin. We have different needs for plugins. The Prominent Manager will give us this facility. We can download and backup any plugin used by the any WordPress website.
 
-It is a very light weight plugin. Installing it will not affect our wordpress website in any way but using it we will get a unique feature of wordpress. It will very reliably download any plugin as a zip file. There is no chance of any file loss so we can reuse the downloaded plugin on any WordPress website without any risk. You can easily download any plugin on your website with the help of this plugin. After Wp plugin manager activation you will see download button under each plugin on your plugin page. Clicking the download button will download the plugin in zip format.
+It is a very light weight plugin. Installing it will not affect our wordpress website in any way but using it we will get a unique feature of wordpress. It will very reliably download any plugin as a zip file. There is no chance of any file loss so we can reuse the downloaded plugin on any WordPress website without any risk. You can easily download any plugin on your website with the help of this plugin. After Prominent Manager activation you will see download button under each plugin on your plugin page. Clicking the download button will download the plugin in zip format.
 
 == Features ==
 * Plugin Download
@@ -43,7 +43,7 @@ It is a very light weight plugin. Installing it will not affect our wordpress we
 
 == Frequently Asked Questions ==
 
-= How to install WP Plugin Manager? =
+= How to install Prominent Manager? =
 See the installation tab.
 
 = What is the minimum php version required?

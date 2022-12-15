@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'WPD\\Downloads\\' => array($baseDir . '/includes'),
+    'PM\\ProminentManager\\' => array($baseDir . '/includes'),
 );

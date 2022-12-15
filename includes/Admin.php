@@ -1,6 +1,6 @@
 <?php
 
-namespace WPD\Downloads;
+namespace PM\ProminentManager;
 
 /**
  * The admin class
@@ -12,9 +12,9 @@ class Admin {
      */
     function __construct() {
         //Showing All Plugin that are active now
-        // new Admin\WPMenu();
+        // new Admin\PMMenu();
 
         //Showing Download button and manage download function
-        new Admin\WPPLdownload();
+        new Admin\ProminentManagerdownload();
     }
 }

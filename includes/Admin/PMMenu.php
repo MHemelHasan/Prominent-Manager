@@ -1,12 +1,12 @@
 <?php
 
-namespace WPD\Downloads\Admin;
+namespace PM\ProminentManager\Admin;
 
 /**
  * Menu handler class
  */
 
- class WPMenu {
+ class PMMenu {
 
 
     /**

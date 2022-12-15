@@ -1,6 +1,6 @@
 <?php
 
-namespace WPD\Downloads;
+namespace PM\ProminentManager;
 
 /**
  * Frontend handler class

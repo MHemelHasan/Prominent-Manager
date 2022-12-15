@@ -1,24 +1,26 @@
 <?php
 
-namespace WPD\Downloads\Admin;
+namespace PM\ProminentManager\Admin;
 
 /**
  * Download handler class
  */
 
-//  require_once 'Pclzip.php';
+
+// Zip Functionality
+require_once 'Pclzip.php';
 
 
-class WPPLdownload {
+class ProminentManagerdownload {
     
     /**
      * Initialize the class
      */
     function __construct() {
-        // Check, if there is a 'wppm' Get param, and there is a proper nonce set
-        if(isset($_GET['wppm']) && wp_verify_nonce($_GET['_wpnonce'], 'wppl-download')){
+        // Check, if there is a 'pmpd' Get param, and there is a proper nonce set
+        if(isset($_GET['pmpd']) && wp_verify_nonce($_GET['_wpnonce'], 'pmpd-download')){
             // perform downloading
-            $this->wp_manager_download();
+            $this->prominent_managerpl_download();
         }
 
         add_filter('plugin_action_links', [$this, 'wp_plugin_download_links'], 10, 4);
@@ -35,9 +37,9 @@ class WPPLdownload {
         else
             $what = 'plugin';
 
-        $dowload_query = build_query(array('wppm' => $what, 'object' => $file));
+        $dowload_query = build_query(array('pmpd' => $what, 'object' => $file));
         $download_link = sprintf('<a href="%s">%s</a>',
-            wp_nonce_url(admin_url('?' . $dowload_query), 'wppl-download'),
+            wp_nonce_url(admin_url('?' . $dowload_query), 'pmpd-download'),
             __('Download')
         );
             
@@ -50,11 +52,11 @@ class WPPLdownload {
      *
      * @return Plugin zip folder
      */
-    public function wp_manager_download(){
+    public function prominent_managerpl_download(){
         // Kind of object we download (theme or plugin)
-        $what = $_GET['wppm'];
+        $what = sanitize_text_field($_GET['pmpd']);
         // The name of object
-        $object = $_GET['object'];
+        $object = sanitize_text_field($_GET['object']);
     
         // Prepare object name and root path for given object type
         switch($what){

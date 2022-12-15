@@ -3,7 +3,7 @@
         'name' => 'mhemelhasan/wedevs-academy',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'e951913e422b18a4ce5160da22f0acf68d416790',
+        'reference' => '3415db1dd82224534204b9c47c0298aa050d387f',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'mhemelhasan/wedevs-academy' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'e951913e422b18a4ce5160da22f0acf68d416790',
+            'reference' => '3415db1dd82224534204b9c47c0298aa050d387f',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

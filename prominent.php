@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: WP Plugin Manager
- * Description: You can easily download any plugin on your website with the help of this plugin. After Wp plugin manager activation you will see download button under each plugin on your plugin page. Clicking the download button will download the plugin in zip format.
+ * Plugin Name: Prominent Manager 
+ * Description: You can easily download any plugin on your website with the help of this plugin. After Prominent Manager activation you will see download button under each plugin on your plugin page. Clicking the download button will download the plugin in zip format.
  * Plugin URI: https://mhemelhasan.com/WpD
  * Author: M Hemel Hasan
  * Author URI: https://mhemelhasan.com
@@ -9,7 +9,7 @@
  * Text Domain: wp-manager
  * License: GPL3 
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
- * Tags: Plugin download, wp plugin download, Plugin downloader, wp plugin downloader, wp plugin manager
+ * Tags: plugin download, wp plugin download, plugin downloader, wp plugin downloader, wp plugin manager
  * Tested up to: 6.1.1
  * Requires PHP: 7.2
  *              
@@ -23,6 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
+
 /** 
  * Auto Loader from PSR4
  */
@@ -31,7 +32,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 /**
  * The main plugin class
  */
-final class wp_manager {
+final class pm_prominent {
 
     /**
      * Plugin version
@@ -54,7 +55,7 @@ final class wp_manager {
     /**
      * Initializes a singleton instance
      *
-     * @return \wp_manager
+     * @return \pm_prominent
      */
     public static function init() {
         static $instance = false;
@@ -72,11 +73,11 @@ final class wp_manager {
      * @return void
      */
     public function define_constants() {
-        define( 'WP_MANAGER_VERSION', self::version );
-        define( 'WP_MANAGER_FILE', __FILE__ );
-        define( 'WP_MANAGER_PATH', __DIR__ );
-        define( 'WP_MANAGER_URL', plugins_url( '', WP_MANAGER_FILE ) );
-        define( 'WP_MANAGER_ASSETS', WP_MANAGER_URL . '/assets' );
+        define( 'PM_PROMINENT_VERSION', self::version );
+        define( 'PM_PROMINENT_FILE', __FILE__ );
+        define( 'PM_PROMINENT_PATH', __DIR__ );
+        define( 'PM_PROMINENT_URL', plugins_url( '', PM_PROMINENT_FILE ) );
+        define( 'PM_PROMINENT_ASSETS', PM_PROMINENT_URL . '/assets' );
     }
 
     /**
@@ -86,12 +87,12 @@ final class wp_manager {
      */
     public function init_plugin() {
 
-        new WPD\Downloads\Assets();
+        new PM\ProminentManager\Assets();
 
         if ( is_admin() ) {
-            new WPD\Downloads\Admin();
+            new PM\ProminentManager\Admin();
         } else {
-            new WPD\Downloads\Frontend();
+            new PM\ProminentManager\Frontend();
             
         }
 
@@ -103,13 +104,13 @@ final class wp_manager {
      * @return void
      */
     public function activate() {
-        $installed = get_option( 'wp_manager_installed' );
+        $installed = get_option( 'pm_prominent_installed' );
 
         if ( ! $installed ) {
-            update_option( 'wp_manager_installed', time() );
+            update_option( 'pm_prominent_installed', time() );
         }
 
-        update_option( 'wp_manager_version', WP_MANAGER_VERSION);
+        update_option( 'pm_prominent_version', PM_PROMINENT_VERSION);
     }
 
 }
@@ -117,11 +118,11 @@ final class wp_manager {
     /**
      * Initializes the main plugin
      *
-     * @return \wp_manager
+     * @return \pm_prominent
      */
-    function wp_manager() {
-        return wp_manager::init();
+    function pm_prominent() {
+        return pm_prominent::init();
     }
 
 // kick-off the plugin
-wp_manager();
+pm_prominent();
