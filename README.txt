@@ -1,18 +1,18 @@
-=== Prominent ===
+=== Prominent Manager ===
 Contributors: hemelhasan
-Tags: Plugin download, wp plugin download, Plugin downloader, wp plugin downloader, wp plugin manager
+Tags: Plugin download, wp plugin download, Plugin downloader, wp plugin downloader, wp plugin manager, downloader, download
 Requires at least: 4.0
 Tested up to: 6.1.1
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 Requires PHP: 7.2
 License: GPL3 
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-This plugin will work as a Prominent Manager for WordPress. For now, You can download any plugin with this plugin.
+This plugin will work as a Plugins Manager for WordPress. For now, You can download any plugin with this plugin. But in the future, you can downgrade any of your plugins and upgrade to the latest version.
 
 === Description ===
 
-= Download the plugin from your WordPress site
+Download the plugin from your WordPress site! Much easier because now there are prominent managers.
 
 Prominent Manager will add a new download button below each plugin on the plugin page of your website. With the help of this download button you can download that plugin. We have different needs for plugins. The Prominent Manager will give us this facility. We can download and backup any plugin used by the any WordPress website.
 

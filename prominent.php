@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Prominent Manager 
- * Description: You can easily download any plugin on your website with the help of this plugin. After Prominent Manager activation you will see download button under each plugin on your plugin page. Clicking the download button will download the plugin in zip format.
+ * Description: Download the plugin from your WordPress site! Much easier because now there are prominent managers. You can easily download any plugin on your website with the help of this plugin. After Prominent Manager activation you will see download button under each plugin on your plugin page. Clicking the download button will download the plugin in zip format.
  * Plugin URI: https://mhemelhasan.com/WpD
  * Author: M Hemel Hasan
  * Author URI: https://mhemelhasan.com
- * Version: 1.1.1
+ * Version: 1.1.2
  * Text Domain: wp-manager
  * License: GPL3 
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -39,7 +39,7 @@ final class pm_prominent {
      *
      * @var string
      */
-    const version = '1.1.1';
+    const version = '1.1.2';
 
     /**
      * Class construcotr
