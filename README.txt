@@ -1,61 +1,112 @@
 === Prominent Manager ===
 Contributors: hemelhasan
-Tags: Plugin download, wp plugin download, Plugin downloader, wp plugin downloader, wp plugin manager, downloader, download
+Tags: plugin download, wordpress plugin manager, plugin backup, plugin rollback, plugin downloader, plugin save
 Requires at least: 4.0
-Tested up to: 6.1.1
-Stable tag: 1.1.2
+Tested up to: 6.8.2
+Stable tag: 1.1.4
 Requires PHP: 7.2
-License: GPL3 
+License: GPL-3.0
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-This plugin will work as a Plugins Manager for WordPress. For now, You can download any plugin with this plugin. But in the future, you can downgrade any of your plugins and upgrade to the latest version.
+A simple yet powerful plugin to manage your WordPress plugins. Download, back up, and (coming soon) roll back plugins directly from your WordPress dashboard.
 
-=== Description ===
+== Description ==
 
-Download the plugin from your WordPress site! Much easier because now there are prominent managers.
+**Prominent Manager** makes plugin management effortless.  
+With just one click, you can download any installed plugin as a ZIP file directly from your WordPress admin dashboard — no FTP, cPanel, or external tools needed.
 
-Prominent Manager will add a new download button below each plugin on the plugin page of your website. With the help of this download button you can download that plugin. We have different needs for plugins. The Prominent Manager will give us this facility. We can download and backup any plugin used by the any WordPress website.
+**Why you’ll love it:**
+- Quickly download plugins for backup or migration.
+- Ensure you have a local copy of your favorite plugins.
+- Safe, lightweight, and easy to use.
 
-It is a very light weight plugin. Installing it will not affect our wordpress website in any way but using it we will get a unique feature of wordpress. It will very reliably download any plugin as a zip file. There is no chance of any file loss so we can reuse the downloaded plugin on any WordPress website without any risk. You can easily download any plugin on your website with the help of this plugin. After Prominent Manager activation you will see download button under each plugin on your plugin page. Clicking the download button will download the plugin in zip format.
+Currently, Prominent Manager focuses on **plugin downloads**, but upcoming updates will include:
+- **Theme downloads**
+- **Plugin rollback** (restore to a previous version)
+- **Theme rollback**
+
+No complex configuration — just install, activate, and start downloading.
+
+**Key Benefits:**
+- Zero performance impact.
+- Secure, lossless ZIP downloads.
+- Works with any plugin installed on your site.
 
 == Features ==
-* Plugin Download
 
-== Up Coming Features ==
-* Theme Download Option
-* Plugin Rollback
-* Theme Rollback
+- Download any installed plugin in ZIP format.
+- One-click download button under each plugin in your dashboard.
+- Lightweight and secure — no performance overhead.
+- No technical skills required.
 
-== Installation and Use ==
+== Upcoming Features ==
 
-1. Download and unzip the plugin. Upload the unzipped folder to the wp-contents/plugins folder of your WordPress installation.
-2. Active the plugin from the WordPress Plugins administration page.
-3. Alternatively, you can go to WP admin panel, click 'Plugins' -> 'Add new'. In the search input box, type 'Wp Plugin Manager'.
-4. Install and activate the plugin.
-5. That's it. No other settings is necessary. Now you will see a download button added under each of your plugins.
+- Download installed themes.
+- Roll back plugins to previous versions.
+- Roll back themes to previous versions.
 
-== If it's not working ==
+== Installation ==
 
-- Step 1. Check if you Plugin is Activated.
-- Step 2. Check each of your plugins has download button.
-- Step 3. What is showing after clicking download button.
-- Setp 4. Open a support request with Step 3 Information
+1. **Automatic installation**  
+   - Go to **Plugins → Add New** in your WordPress dashboard.  
+   - Search for **Prominent Manager**.  
+   - Click **Install Now** and then **Activate**.
+
+2. **Manual installation**  
+   - Download the plugin ZIP file.  
+   - Unzip it and upload the folder to `/wp-content/plugins/`.  
+   - Activate from the **Plugins** page in your dashboard.
+
+== Usage ==
+
+Once activated:
+- Go to **Plugins → Installed Plugins**.
+- Under each plugin, you'll see a **Download** button.
+- Click the button to download the plugin as a ZIP file.
+
+== Troubleshooting ==
+
+If the plugin isn’t working:
+1. Ensure Prominent Manager is **activated**.
+2. Check if the **Download** button appears under each plugin.
+3. Click the button and note any error messages.
+4. Open a support ticket with details from step 3.
 
 == Frequently Asked Questions ==
 
-= How to install Prominent Manager? =
-See the installation tab.
+= What is the minimum PHP version required? =  
+Requires PHP **7.2** or higher (PHP 7.4+ recommended for security and performance).
 
-= What is the minimum php version required?
-Recommends at least PHP 7.4. You may see a warning message in your WordPress dashboard asking you to upgrade PHP if it still uses a version lower than 7.4. Requires PHP: 7.2
+= What is the minimum WordPress version required? =  
+Requires WordPress **4.0** or higher (latest version recommended).
 
-= What is the minimum WordPress version required?
-The latest version is recommended. Requires at least: 4.0.
+= Can I download premium or commercial plugins? =  
+Yes, as long as they are installed on your site. Ensure you comply with their license terms.
 
 == Screenshots ==
 1. Screenshot_1.png
+1. Download button under each plugin in the WordPress dashboard.
 
+== Privacy Policy ==
+Prominent Manager uses [Appsero](https://appsero.com) SDK to collect some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
+
+Appsero SDK **does not gather any data by default.** The SDK only starts gathering basic telemetry data **when a user allows it via the admin notice**. We collect the data to ensure a great user experience for all our users.
+
+Integrating Appsero SDK **DOES NOT IMMEDIATELY** start gathering data, **without confirmation from users in any case.**
+
+Learn more about how [Appsero collects and uses this data](https://appsero.com/privacy-policy/).
 
 == Changelog ==
+
+= 1.1.4 = ( Aug 10, 2025 )
+- Minor improvements and readme update.
+- System improvements
+
+= 1.1.3 = ( jun 20, 2023 )
+- Minor improvements and update.
+
+= 1.1.2 = ( Dec 20, 2022 )
+- Minor improvements and readme update.
+
 = 1.1.1 = ( Dec 10, 2022 )
-- Initial release
+- Initial release.

@@ -11,12 +11,20 @@ class ComposerStaticInit6a789dc2784aede1694fa02772b6e058
         array (
             'PM\\ProminentManager\\' => 20,
         ),
+        'A' => 
+        array (
+            'Appsero\\' => 8,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'PM\\ProminentManager\\' => 
         array (
             0 => __DIR__ . '/../..' . '/includes',
+        ),
+        'Appsero\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/appsero/client/src',
         ),
     );
 

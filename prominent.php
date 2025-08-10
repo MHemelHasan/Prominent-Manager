@@ -2,15 +2,15 @@
 /**
  * Plugin Name: Prominent Manager 
  * Description: Download the plugin from your WordPress site! Much easier because now there are prominent managers. You can easily download any plugin on your website with the help of this plugin. After Prominent Manager activation you will see download button under each plugin on your plugin page. Clicking the download button will download the plugin in zip format.
- * Plugin URI: https://mhemelhasan.com/WpD
+ * Plugin URI: https://mhemelhasan.com/pm-manager
  * Author: M Hemel Hasan
  * Author URI: https://mhemelhasan.com
- * Version: 1.1.2
- * Text Domain: wp-manager
+ * Version: 1.1.4
+ * Text Domain: pm-manager
  * License: GPL3 
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
- * Tags: plugin download, wp plugin download, plugin downloader, wp plugin downloader, wp plugin manager
- * Tested up to: 6.1.1
+ * Tags: plugin download, wordpress plugin manager, plugin backup, plugin rollback, plugin downloader, plugin save, plugin zip, plugin download manager, plugin download button, plugin download link, plugin download zip, plugin download wordpress, plugin download manager wordpress, plugin download manager for wordpress, plugin download manager for wp, plugin download manager for wordpress free, plugin download manager for wp free
+ * Tested up to: 6.8.2
  * Requires PHP: 7.2
  *              
  */
@@ -18,7 +18,7 @@
 /** 
  * Basic Security
  */
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
     exit;
 }
 
@@ -32,7 +32,8 @@ require_once __DIR__ . '/vendor/autoload.php';
 /**
  * The main plugin class
  */
-final class pm_prominent {
+final class pm_prominent
+{
 
     /**
      * Plugin version
@@ -44,12 +45,13 @@ final class pm_prominent {
     /**
      * Class construcotr
      */
-    private function __construct() {
+    private function __construct()
+    {
         $this->define_constants();
 
-        register_activation_hook( __FILE__, [ $this, 'activate' ] );
+        register_activation_hook(__FILE__, [$this, 'activate']);
 
-        add_action( 'plugins_loaded', [ $this, 'init_plugin' ] );
+        add_action('plugins_loaded', [$this, 'init_plugin']);
     }
 
     /**
@@ -57,10 +59,11 @@ final class pm_prominent {
      *
      * @return \pm_prominent
      */
-    public static function init() {
+    public static function init()
+    {
         static $instance = false;
 
-        if ( ! $instance ) {
+        if (!$instance) {
             $instance = new self();
         }
 
@@ -72,12 +75,13 @@ final class pm_prominent {
      *
      * @return void
      */
-    public function define_constants() {
-        define( 'PM_PROMINENT_VERSION', self::version );
-        define( 'PM_PROMINENT_FILE', __FILE__ );
-        define( 'PM_PROMINENT_PATH', __DIR__ );
-        define( 'PM_PROMINENT_URL', plugins_url( '', PM_PROMINENT_FILE ) );
-        define( 'PM_PROMINENT_ASSETS', PM_PROMINENT_URL . '/assets' );
+    public function define_constants()
+    {
+        define('PM_PROMINENT_VERSION', self::version);
+        define('PM_PROMINENT_FILE', __FILE__);
+        define('PM_PROMINENT_PATH', __DIR__);
+        define('PM_PROMINENT_URL', plugins_url('', PM_PROMINENT_FILE));
+        define('PM_PROMINENT_ASSETS', PM_PROMINENT_URL . '/assets');
     }
 
     /**
@@ -85,15 +89,17 @@ final class pm_prominent {
      *
      * @return void
      */
-    public function init_plugin() {
+    public function init_plugin()
+    {
 
         new PM\ProminentManager\Assets();
 
-        if ( is_admin() ) {
+        if (is_admin()) {
             new PM\ProminentManager\Admin();
+            $this->appsero_init_tracker_prominent_manager();
         } else {
             new PM\ProminentManager\Frontend();
-            
+
         }
 
     }
@@ -103,26 +109,42 @@ final class pm_prominent {
      *
      * @return void
      */
-    public function activate() {
-        $installed = get_option( 'pm_prominent_installed' );
+    public function activate()
+    {
+        $installed = get_option('pm_prominent_installed');
 
-        if ( ! $installed ) {
-            update_option( 'pm_prominent_installed', time() );
+        if (!$installed) {
+            update_option('pm_prominent_installed', time());
         }
 
-        update_option( 'pm_prominent_version', PM_PROMINENT_VERSION);
+        update_option('pm_prominent_version', PM_PROMINENT_VERSION);
+    }
+
+    public function appsero_init_tracker_prominent_manager()
+    {
+
+        if (!class_exists('Appsero\Client')) {
+            require_once __DIR__ . '/appsero/src/Client.php';
+        }
+
+        $client = new Appsero\Client('e06b6587-56de-4f97-bfd3-827c76fb321f', 'Prominent Manager', __FILE__);
+
+        // Active insights
+        $client->insights()->init();
+
     }
 
 }
 
-    /**
-     * Initializes the main plugin
-     *
-     * @return \pm_prominent
-     */
-    function pm_prominent() {
-        return pm_prominent::init();
-    }
+/**
+ * Initializes the main plugin
+ *
+ * @return \pm_prominent
+ */
+function pm_prominent()
+{
+    return pm_prominent::init();
+}
 
 // kick-off the plugin
 pm_prominent();
