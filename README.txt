@@ -1,6 +1,6 @@
 === Prominent Manager ===
 Contributors: hemelhasan
-Tags: plugin download, wordpress plugin manager, plugin backup, plugin rollback, plugin downloader, plugin save
+Tags: plugin download, wordpress plugin manager, plugin backup, plugin rollback, plugin downloader
 Requires at least: 4.0
 Tested up to: 6.8.2
 Stable tag: 1.1.4
@@ -8,7 +8,7 @@ Requires PHP: 7.2
 License: GPL-3.0
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-A simple yet powerful plugin to manage your WordPress plugins. Download, back up, and (coming soon) roll back plugins directly from your WordPress dashboard.
+Manage WordPress plugins with ease — download, back up, and (coming soon) roll back directly from your dashboard
 
 == Description ==
 
@@ -85,7 +85,7 @@ Yes, as long as they are installed on your site. Ensure you comply with their li
 
 == Screenshots ==
 1. Screenshot_1.png
-1. Download button under each plugin in the WordPress dashboard.
+2. Download button under each plugin in the WordPress dashboard.
 
 == Privacy Policy ==
 Prominent Manager uses [Appsero](https://appsero.com) SDK to collect some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
